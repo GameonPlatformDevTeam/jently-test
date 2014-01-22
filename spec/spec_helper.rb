@@ -38,7 +38,7 @@ RSpec.configure do |config|
   # instead of true.
   # config.use_transactional_fixtures = true
   config.expect_with :rspec do |c|
-    c.syntax = :expect
+    c.syntax = :should
   end
 
   # If true, the base class of anonymous controllers will be inferred

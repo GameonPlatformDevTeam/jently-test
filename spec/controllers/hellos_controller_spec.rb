@@ -30,14 +30,6 @@ describe HellosController do
   # HellosController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET index" do
-    it "assigns all hellos as @hellos" do
-      hello = Hello.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:hellos).should eq([hello])
-    end
-  end
-
   describe "GET show" do
     it "assigns the requested hello as @hello" do
       hello = Hello.create! valid_attributes
@@ -62,25 +54,6 @@ describe HellosController do
   end
 
   describe "POST create" do
-    describe "with valid params" do
-      it "creates a new Hello" do
-        expect {
-          post :create, {:hello => valid_attributes}, valid_session
-        }.to change(Hello, :count).by(1)
-      end
-
-      it "assigns a newly created hello as @hello" do
-        post :create, {:hello => valid_attributes}, valid_session
-        assigns(:hello).should be_a(Hello)
-        assigns(:hello).should be_persisted
-      end
-
-      it "redirects to the created hello" do
-        post :create, {:hello => valid_attributes}, valid_session
-        response.should redirect_to(Hello.last)
-      end
-    end
-
     describe "with invalid params" do
       it "assigns a newly created but unsaved hello as @hello" do
         # Trigger the behavior that occurs when invalid params are submitted
@@ -141,20 +114,4 @@ describe HellosController do
       end
     end
   end
-
-  describe "DELETE destroy" do
-    it "destroys the requested hello" do
-      hello = Hello.create! valid_attributes
-      expect {
-        delete :destroy, {:id => hello.to_param}, valid_session
-      }.to change(Hello, :count).by(-1)
-    end
-
-    it "redirects to the hellos list" do
-      hello = Hello.create! valid_attributes
-      delete :destroy, {:id => hello.to_param}, valid_session
-      response.should redirect_to(hellos_url)
-    end
-  end
-
 end

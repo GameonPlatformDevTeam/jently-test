@@ -27,15 +27,15 @@
             <td class="left_align"><a href="app-controllers-hellos_controller_rb.html">app/controllers/hellos_controller.rb</a></td>
             <td class='right_align'><tt>83</tt></td>
             <td class='right_align'><tt>40</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.57%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:100px"></div>
-        <div class="uncovered" style="width:0px"></div>
+        <div class="covered" style="width:92px"></div>
+        <div class="uncovered" style="width:8px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>82.50%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:100px"></div>
-        <div class="uncovered" style="width:0px"></div>
+        <div class="covered" style="width:83px"></div>
+        <div class="uncovered" style="width:17px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -188,10 +188,10 @@
         <tr class="marked">
           <td><pre><a name="line47">47</a>       if @hello.save</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line48">48</a>         format.html { redirect_to @hello, notice: &#39;Hello was successfully created.&#39; }</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line49">49</a>         format.json { render json: @hello, status: :created, location: @hello }</pre></td>
         </tr>
         <tr class="inferred">
@@ -272,22 +272,22 @@
         <tr class="marked">
           <td><pre><a name="line75">75</a>   def destroy</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line76">76</a>     @hello = Hello.find(params[:id])</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line77">77</a>     @hello.destroy</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line78">78</a> </pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line79">79</a>     respond_to do |format|</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line80">80</a>       format.html { redirect_to hellos_url }</pre></td>
         </tr>
-        <tr class="marked">
+        <tr class="uncovered">
           <td><pre><a name="line81">81</a>       format.json { head :no_content }</pre></td>
         </tr>
         <tr class="inferred">
@@ -302,7 +302,7 @@
       </tbody>
     </table>
 
-    <p>Generated on 2014-01-22 06:55:02 +0000 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2014-01-22 07:22:33 +0000 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
