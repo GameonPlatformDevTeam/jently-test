@@ -17,9 +17,6 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 RSpec.configure do |config|
   include FactoryGirl::Syntax::Methods
   config.infer_base_class_for_anonymous_controllers = false
-  config.include TimeStop
-  config.include ActionFilterSetter, type: :controller
-  config.include LoginHelpers, type: :controller
   config.before(:each, :behaviour_type => :controller) do
     @controller.instance_eval { flash.stub!(:sweep) } # for testing flash now
     @only_filter_chain = @controller.class.filter_chain - @controller.class.superclass.filter_chain
@@ -55,9 +52,3 @@ RSpec.configure do |config|
   config.order = "random"
 end
 
-def mock_user(options = {})
-  @mock_user ||= mock_model(User, options.reverse_merge(
-    usn: "", userid: "", luserid: "", passwd: "", sex: "", email: "", lastname: "", firstname: "", birthday: "", birthdayopen: "", regdate: "", emailcheck: "", userstatus: "", logincnt2006: "", lastlogondate: "", regip: "", lastloginip: "", mailcfg: "", referer: "", regid: "", referusn: "", joinchannel: "", newslettercfg: "", macaddress: "", bloglettercfg: "", logincnt2007: "", job: "", region: "", joinpath: "", remaintime: "", logincnt: "", accountid: "", global_lev: "", local_lev: "", nick: "", old_accountid: "", profile_image: "",
-    save: true, save!: true, update_attribute: true, update_attributes: true
-  ))
-end
