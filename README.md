@@ -1,2 +1,2 @@
-janky-test
+jently-test
 ==========
