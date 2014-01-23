@@ -23,13 +23,13 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-  gem "rspec-rails"
-  gem "factory_girl_rails"
-  gem "jasminerice"
   gem 'rails_best_practices'
   gem 'brakeman'
   gem "simplecov", :require => false
   gem "simplecov-rcov", :require => false
+  gem "factory_girl_rails"
+  gem "jasminerice"
+  gem "rspec-rails"
 end
 
 
